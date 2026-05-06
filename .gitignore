@@ -31,6 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+.env
 
 ### Variables de entorno (NO subir al repositorio) ###
 
