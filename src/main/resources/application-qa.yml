@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/derechohabitante_qa  # Cambiar a la URL de QA en escenario real
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+
+app:
+  param1: ${PARAM_LOG_1}
+  param2: ${PARAM_LOG_2}
+  batch:
+    input-file: classpath:derechohambientes.txt
+    chunk-size: 5

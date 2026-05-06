@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  main:
+    banner-mode: "off"
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+app:
+  version: 1.0.0
+  autor: Ramon
+  batch:
+    # classpath: evita depender del directorio de trabajo con java -jar (el .txt va dentro del JAR)
+    input-file: classpath:derechohambientes.txt
+    chunk-size: 5

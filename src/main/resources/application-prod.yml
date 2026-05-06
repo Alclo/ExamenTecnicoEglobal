@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/derechohabitante_prod # Cambiar a la URL de PROD en escenario real
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+logging:
+  level:
+    root: WARN
+    com.examen: INFO
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+
+app:
+  param1: ${PARAM_LOG_1}
+  param2: ${PARAM_LOG_2}
+  batch:
+    input-file: classpath:derechohambientes.txt
+    chunk-size: 5

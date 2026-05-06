@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/derechohabitante_dev # Cambiar a la URL de DEV en escenario real
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+
+app:
+  param1: ${PARAM_LOG_1}
+  param2: ${PARAM_LOG_2}
+  batch:
+    input-file: classpath:derechohambientes.txt
+    chunk-size: 1
