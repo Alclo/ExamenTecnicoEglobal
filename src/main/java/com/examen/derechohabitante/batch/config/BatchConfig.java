@@ -142,10 +142,6 @@ public class BatchConfig {
         };
     }
 
-    /**
-     * El builder {@code FlatFileItemReaderBuilder.delimited().strict(true)} no siempre garantiza el rechazo de
-     * líneas con columnas extra; aquí contamos tokens con {@code split(";", -1)} y solo aceptamos exactamente cinco.
-     */
     static final class StrictFiveSemicolonFieldsLineMapper implements LineMapper<DerechohambientesRequestDTO> {
 
         static final int EXPECTED_FIELDS = 5;

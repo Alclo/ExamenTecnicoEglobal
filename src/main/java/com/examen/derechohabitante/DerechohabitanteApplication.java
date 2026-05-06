@@ -60,7 +60,6 @@ public class DerechohabitanteApplication implements CommandLineRunner {
         }
     }
 
-    /** Requisito entornos: queda trazado qué perfil(s) Spring (dev/qa/prod) está activo según la configuración externa. */
     private void logPerfilesSpring() {
         String[] activos = environment.getActiveProfiles();
         String[] def = environment.getDefaultProfiles();
