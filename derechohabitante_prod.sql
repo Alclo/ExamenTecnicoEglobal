@@ -5,7 +5,7 @@
 -- Dumped from database version 15.14
 -- Dumped by pg_dump version 16.0
 
--- Started on 2026-05-05 23:49:45
+-- Started on 2026-05-06 00:01:29
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -221,10 +221,10 @@ ALTER SEQUENCE public.batch_step_execution_seq OWNER TO postgres;
 
 --
 -- TOC entry 214 (class 1259 OID 25634)
--- Name: derechohabitante; Type: TABLE; Schema: public; Owner: postgres
+-- Name: derechohambientes; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.derechohabitante (
+CREATE TABLE public.derechohambientes (
     id bigint NOT NULL,
     nombre character varying(100) NOT NULL,
     ciudad character varying(100),
@@ -233,7 +233,7 @@ CREATE TABLE public.derechohabitante (
 );
 
 
-ALTER TABLE public.derechohabitante OWNER TO postgres;
+ALTER TABLE public.derechohambientes OWNER TO postgres;
 
 --
 -- TOC entry 3204 (class 2604 OID 25745)
@@ -299,10 +299,10 @@ ALTER TABLE ONLY public.batch_step_execution
 
 --
 -- TOC entry 3207 (class 2606 OID 25638)
--- Name: derechohabitante derechohabientes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: derechohambientes derechohabientes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.derechohabitante
+ALTER TABLE ONLY public.derechohambientes
     ADD CONSTRAINT derechohabientes_pkey PRIMARY KEY (id);
 
 
@@ -360,7 +360,7 @@ ALTER TABLE ONLY public.batch_step_execution_context
     ADD CONSTRAINT step_exec_ctx_fk FOREIGN KEY (step_execution_id) REFERENCES public.batch_step_execution(step_execution_id);
 
 
--- Completed on 2026-05-05 23:49:45
+-- Completed on 2026-05-06 00:01:29
 
 --
 -- PostgreSQL database dump complete
