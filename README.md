@@ -1,0 +1,2 @@
+# ExamenTecnicoEglobal
+Examen Tecnico
